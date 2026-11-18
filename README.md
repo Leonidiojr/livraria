@@ -1,5 +1,7 @@
 # Páginas Vivas Livraria — Sistema de Vendas de Livros
 
+# Desenvolvedores: Vitor Inácio Prudente, Leonidio Alves de Moraes Junior, Caio Cintra Gomes
+
 *Mais que livros, novas histórias para você.*
 
 Sistema Full Stack (cliente-servidor) com back-end em **Spring Boot 4 / Java 27**, banco **PostgreSQL**
