@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Livraria - Painel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-painel">
+<header class="topbar">
+    <div class="marca">
+        <img class="marca-logo" src="img/logo-paginas-vivas.png" alt="Páginas Vivas Livraria" width="99" height="72">
+        <p class="slogan">Mais que livros, novas histórias para você.</p>
+    </div>
+    <div class="usuario">
+        <span id="usuario-nome"></span>
+        <span class="badge" id="usuario-perfil"></span>
+        <button class="btn btn-sm" id="btn-sair" type="button">Sair</button>
+    </div>
+</header>
+
+<nav class="tabs" id="abas"></nav>
+
+<main>
+    <section class="painel">
+        <div class="painel-topo">
+            <h2 id="titulo-aba"></h2>
+            <form class="busca" id="form-busca">
+                <select id="filtro" class="oculto" aria-label="Filtro"></select>
+                <select id="filtro2" class="oculto" aria-label="Filtro adicional"></select>
+                <input id="campo-busca" type="search" placeholder="Buscar...">
+                <button class="btn" type="submit">Buscar</button>
+            </form>
+            <button class="btn btn-primary" id="btn-novo" type="button">Novo</button>
+        </div>
+        <div id="mensagem" class="alerta oculto" role="alert"></div>
+        <div class="tabela-wrap">
+            <table>
+                <thead id="tabela-cab"></thead>
+                <tbody id="tabela-corpo"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<dialog id="modal">
+    <form id="form-registro" novalidate>
+        <div class="modal-cab">
+            <h3 id="modal-titulo"></h3>
+            <button class="btn btn-sm" type="button" id="btn-fechar" aria-label="Fechar">&times;</button>
+        </div>
+        <div class="modal-corpo">
+            <div id="modal-erro" class="alerta alerta-erro oculto"></div>
+            <div class="grade" id="modal-campos"></div>
+        </div>
+        <div class="modal-rodape">
+            <div id="modal-acoes" class="modal-acoes"></div>
+            <button class="btn" type="button" id="btn-cancelar">Cancelar</button>
+            <button class="btn btn-primary" type="submit" id="btn-salvar">Salvar</button>
+        </div>
+    </form>
+</dialog>
+
+<div id="toast" class="toast oculto"></div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

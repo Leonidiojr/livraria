@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "livraria-preview",
+      "runtimeExecutable": "D:\\Livraria\\mvnw.cmd",
+      "runtimeArgs": ["-q", "spring-boot:run", "-Dspring-boot.run.arguments=--server.port=8081 --spring.devtools.restart.enabled=false"],
+      "port": 8081
+    }
+  ]
+}

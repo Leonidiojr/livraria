@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Livraria - Entrar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // abertura animada: uma vez por sessao, nunca para quem prefere menos movimento ou ja esta logado
+        (function () {
+            try {
+                var d = document.documentElement;
+                if (sessionStorage.getItem("livraria.token") || sessionStorage.getItem("livraria.intro")) return;
+                if (location.search.indexOf("expirado") >= 0 || navigator.webdriver) return; // nao atrapalha testes automatizados
+                if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+                sessionStorage.setItem("livraria.intro", "1");
+                d.classList.add("com-intro");
+                setTimeout(function () { d.classList.remove("com-intro"); }, 10000); // seguranca se o script falhar
+            } catch (e) { /* sem sessionStorage: segue sem abertura */ }
+        })();
+    </script>
+    <script src="js/intro.js" defer></script>
+</head>
+<body>
+<div class="login-page">
+    <div class="login-card">
+        <div class="login-marca">
+            <img src="img/logo-paginas-vivas-lg.png" alt="Páginas Vivas Livraria" width="193" height="140">
+            <p class="slogan">Mais que livros, novas histórias para você.</p>
+        </div>
+        <p class="sub" id="subtitulo">Sistema de Vendas de Livros</p>
+
+        <div id="mensagem" class="alerta oculto" role="alert"></div>
+
+        <form id="form-login" novalidate>
+            <div class="campo">
+                <label for="login-email">E-mail</label>
+                <input id="login-email" name="email" type="email" autocomplete="username" required>
+            </div>
+            <div class="campo">
+                <label for="login-senha">Senha</label>
+                <input id="login-senha" name="senha" type="password" autocomplete="current-password" required>
+            </div>
+            <button class="btn btn-primary" type="submit" id="btn-entrar">Entrar</button>
+            <div class="troca">Nao tem conta? <a href="#" id="link-registro">Cadastre-se</a></div>
+        </form>
+
+        <form id="form-registro" class="oculto" novalidate>
+            <div class="campo">
+                <label for="reg-nome">Nome</label>
+                <input id="reg-nome" name="nome" required>
+                <div class="erro-campo" data-campo="nome"></div>
+            </div>
+            <div class="campo">
+                <label for="reg-email">E-mail</label>
+                <input id="reg-email" name="email" type="email" required>
+                <div class="erro-campo" data-campo="email"></div>
+            </div>
+            <div class="campo">
+                <label for="reg-cpf">CPF</label>
+                <input id="reg-cpf" name="cpf" inputmode="numeric" maxlength="14" placeholder="000.000.000-00" required>
+                <div class="erro-campo" data-campo="cpf"></div>
+            </div>
+            <div class="campo">
+                <label for="reg-senha">Senha (minimo 6 caracteres)</label>
+                <input id="reg-senha" name="senha" type="password" autocomplete="new-password" required>
+                <div class="erro-campo" data-campo="senha"></div>
+            </div>
+            <button class="btn btn-primary" type="submit" id="btn-registrar">Criar conta</button>
+            <div class="troca">Ja tem conta? <a href="#" id="link-login">Entrar</a></div>
+        </form>
+    </div>
+</div>
+<script type="module" src="js/login.js"></script>
+</body>
+</html>

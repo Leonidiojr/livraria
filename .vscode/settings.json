@@ -1,0 +1,11 @@
+{
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.test.config": {
+    "javaExec": "C:\\Program Files\\Java\\jdk-27.0.1.1\\bin\\java.exe"
+  },
+  "maven.executable.preferMavenWrapper": true,
+  "terminal.integrated.env.windows": {
+    "JAVA_HOME": "C:\\Program Files\\Java\\jdk-27.0.1.1"
+  }
+}

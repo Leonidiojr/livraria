@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "LivrariaApplication",
+      "request": "launch",
+      "mainClass": "com.example.livraria.LivrariaApplication",
+      "projectName": "livraria",
+      "javaExec": "${env:JAVA_HOME}\\bin\\java.exe"
+    }
+  ]
+}
