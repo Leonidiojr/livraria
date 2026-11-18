@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="8dp">
+
+    <include
+        android:id="@+id/capa"
+        layout="@layout/view_capa"
+        android:layout_width="44dp"
+        android:layout_height="64dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/texto"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/subtotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/verde" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/menos"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="Diminuir quantidade"
+        android:minWidth="0dp"
+        android:padding="0dp"
+        android:text="−"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/quantidade"
+        android:layout_width="28dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/mais"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="Aumentar quantidade"
+        android:minWidth="0dp"
+        android:padding="0dp"
+        android:text="+"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/remover"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Remover"
+        android:src="@drawable/ic_remover" />
+</LinearLayout>

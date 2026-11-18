@@ -4,6 +4,7 @@
 
 Sistema Full Stack (cliente-servidor) com back-end em **Spring Boot 4 / Java 27**, banco **PostgreSQL**
 e front-end em **HTML + CSS + JavaScript** que consome a API REST.
+Há também um **app Android nativo em Java** (catálogo, carrinho, pedidos e pagamento) na pasta [`android/`](android/README.md).
 
 ## Atendimento aos requisitos da atividade
 

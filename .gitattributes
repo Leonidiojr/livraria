@@ -1,2 +1,4 @@
 /mvnw text eol=lf
 *.cmd text eol=crlf
+/android/gradlew text eol=lf
+*.bat text eol=crlf

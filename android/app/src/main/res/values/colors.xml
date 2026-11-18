@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cores da marca Paginas Vivas: verde-escuro e dourado -->
+    <color name="verde">#1F4D3A</color>
+    <color name="verde_escuro">#143326</color>
+    <color name="dourado">#C9A227</color>
+    <color name="papel">#FAF7F0</color>
+    <color name="texto">#1C1C1C</color>
+    <color name="texto_suave">#5F5F5F</color>
+    <color name="vermelho">#B3261E</color>
+    <color name="azul">#1E5AA8</color>
+    <color name="branco">#FFFFFF</color>
+</resources>
